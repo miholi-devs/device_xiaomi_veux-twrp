@@ -58,7 +58,7 @@ BOARD_KERNEL_CMDLINE := \
     ignore_builtin_recovery \
     audit=0
 
-TARGET_KERNEL_CONFIG := veux_defconfig
+TARGET_KERNEL_CONFIG := holi-qgki_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
 TARGET_KERNEL_NO_GCC := true
 
