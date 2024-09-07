@@ -18,7 +18,7 @@ TW_MAX_BRIGHTNESS     := 2047
 # Display
 TW_NO_SCREEN_BLANK := true
 TW_FRAMERATE       := 120
-TW_INPUT_BLACKLIST := "uinput-goodix"
+TW_INPUT_BLACKLIST := "hbtp_vm"
 
 # Encryption
 BOARD_USES_METADATA_PARTITION  := true

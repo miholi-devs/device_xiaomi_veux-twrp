@@ -87,6 +87,13 @@ case $board in
         set_model "2201116PI"
         set_name "peux_p_in"
         ;;
+    "moonstone_p_global")
+        set_brand "POCO"
+        set_device "peux"
+        set_marketname "POCO X4 Pro 5G"
+        set_model "2201116PI"
+        set_name "peux_p_global"
+        ;;
     *)
         echo "I: Unable to determine device variant" >> /tmp/recovery.log
         exit 1

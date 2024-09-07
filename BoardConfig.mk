@@ -58,9 +58,24 @@ BOARD_KERNEL_CMDLINE := \
     ignore_builtin_recovery \
     audit=0
 
-TARGET_KERNEL_CONFIG := holi-qgki_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
-TARGET_KERNEL_NO_GCC := true
+#TARGET_KERNEL_CONFIG := holi-qgki_defconfig
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6375
+#TARGET_KERNEL_NO_GCC := true
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_BOOT_HEADER_VERSION := 3
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/veux/kernel
+
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_MKBOOTIMG_ARGS += --vendor_cmdline $(VENDOR_CMDLINE)
+BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE) --board ""
+
+# BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/veux/dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+
+# Kenel dtbo
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/veux/dtbo.img
+
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
